@@ -1,5 +1,5 @@
 route add -net 225.0.0.0 netmask 255.0.0.0 dev ens
-
+   
 tcpdump -A -nn -X-i ens
 kill -9 ±j¨îµ²§ô
 nc
