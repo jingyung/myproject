@@ -1,0 +1,103 @@
+route add -net 225.0.0.0 netmask 255.0.0.0 dev ens
+
+tcpdump -A -nn -X-i ens
+kill -9 強制結束
+nc
+su 切換user
+chgrp ：改變檔案所屬群組
+chown ：改變檔案擁有者
+chmod ：改變檔案的權限, SUID, SGID, SBIT等等的特性
+
+查看GLIBC版本
+strings /lib64/libc.so.6 |grep GLIBC_  
+strings /usr/lib64/libstdc++.so.6 | grep GLIBC
+更新GLIB
+yum -y update glibc
+
+查看執行檔所需LIB
+ldd 
+service vsftpd start
+
+/home/ddsc/TwseTmp/lib
+
+export LD_LIBRARY_PATH=/home/ddsc/TwseTmp/lib:/home/ddsc/marketinfoserver/lib
+
+objdump -p app  
+addr2line -e test1 400506
+
+http://www.xuebuyuan.com/642057.html
+
+ nm app |grep GLIBC_2.14   查看版本使用的FUNCTION
+ps -ef | grep nohup.sh
+ ps -aux 
+ 
+ top 
+ pwd看當下目錄
+ free 看memory
+ sar 看CPU DETAIL
+ uname 看os 版本
+ 
+ more /proc/cpuinfo
+ 
+ 
+ 執行程式，關閉SSH卻不回關閉程式
+ nohup your_command &   nohup command > myout.file 2>&1
+ 
+ jobs
+bg
+ 
+ route add -net 225.25.0.0 netmask 255.255.0.0 dev ens33
+ 
+ netstat-gn 看muticast
+
+ulimit -c unlimited 開啟 DUMP 
+vi /etc/profile中加入以下一行，這將允許生成coredump文件
+
+ulimit -c unlimited
+
+
+原文網址：https://read01.com/mnaJk6.html
+
+
+gdb ./t core.t.3529 看CORE DUMP問題
+
+crontab -e -u
+20 7 * * 1-6 /root/ddsc.sh
+[ddsc.sh]
+	find /root/marketserver/log/ -mtime +5 -type d  -exec rm -Rf {} \;
+	ulimit -c unlimited
+	cd /root/marketserver
+	nohup ./marketserver >/root/marketserver/nohup.txt 2>&1 &
+
+/var/log/cron cron執行LOG
+
+shell
+ date +"%Y%m%d" -d'-10 day'
+find /root/marketserver/log/ -mtime +10 -name "*.*" -exec rm -Rf {} \;
+
+tcp屬性設定
+http://www.cnblogs.com/fczjuever/archive/2013/04/17/3026694.html
+http://www.blogjava.net/yongboy/archive/2013/04/11/397677.html
+/etc/sysctl.conf
+net.ipv4.conf.default.rp_filter = 2
+net.ipv4.conf.all.rp_filter = 2
+net.ipv4.tcp_wmem = 4096 4096 16777216
+net.core.wmem_max=12582912
+sysctl -p
+
+route setting
+net.ipv4.conf.default.rp_filter = 2
+net.ipv4.conf.all.rp_filter = 2
+scp name@ip
+ssh name@ip
+
+ll /proc/14763/fd 查看 socket or file information
+lsof -n -i   | grep 36222307 Check IP  for socket number
+
+http://lovewubo.github.io/shared_library
+
+mkdir -m 777 bak20180120
+cp * bak20180120
+
+
+scp ./marketserver root@172.16.204.175:/root/marketserver
