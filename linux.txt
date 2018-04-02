@@ -1,20 +1,20 @@
 route add -net 225.0.0.0 netmask 255.0.0.0 dev ens
    
 tcpdump -A -nn -X-i ens
-kill -9 ±j¨îµ²§ô
+kill -9 å¼·åˆ¶çµæŸ
 nc
-su ¤Á´«user
-chgrp ¡G§ïÅÜÀÉ®×©ÒÄÝ¸s²Õ
-chown ¡G§ïÅÜÀÉ®×¾Ö¦³ªÌ
-chmod ¡G§ïÅÜÀÉ®×ªºÅv­­, SUID, SGID, SBITµ¥µ¥ªº¯S©Ê
+su åˆ‡æ›user
+chgrp ï¼šæ”¹è®Šæª”æ¡ˆæ‰€å±¬ç¾¤çµ„
+chown ï¼šæ”¹è®Šæª”æ¡ˆæ“æœ‰è€…
+chmod ï¼šæ”¹è®Šæª”æ¡ˆçš„æ¬Šé™, SUID, SGID, SBITç­‰ç­‰çš„ç‰¹æ€§
 
-¬d¬ÝGLIBCª©¥»
+æŸ¥çœ‹GLIBCç‰ˆæœ¬
 strings /lib64/libc.so.6 |grep GLIBC_  
 strings /usr/lib64/libstdc++.so.6 | grep GLIBC
-§ó·sGLIB
+æ›´æ–°GLIB
 yum -y update glibc
 
-¬d¬Ý°õ¦æÀÉ©Ò»ÝLIB
+æŸ¥çœ‹åŸ·è¡Œæª”æ‰€éœ€LIB
 ldd 
 service vsftpd start
 
@@ -27,20 +27,20 @@ addr2line -e test1 400506
 
 http://www.xuebuyuan.com/642057.html
 
- nm app |grep GLIBC_2.14   ¬d¬Ýª©¥»¨Ï¥ÎªºFUNCTION
+ nm app |grep GLIBC_2.14   æŸ¥çœ‹ç‰ˆæœ¬ä½¿ç”¨çš„FUNCTION
 ps -ef | grep nohup.sh
  ps -aux 
  
  top 
- pwd¬Ý·í¤U¥Ø¿ý
- free ¬Ýmemory
- sar ¬ÝCPU DETAIL
- uname ¬Ýos ª©¥»
+ pwdçœ‹ç•¶ä¸‹ç›®éŒ„
+ free çœ‹memory
+ sar çœ‹CPU DETAIL
+ uname çœ‹os ç‰ˆæœ¬
  
  more /proc/cpuinfo
  
  
- °õ¦æµ{¦¡¡AÃö³¬SSH«o¤£¦^Ãö³¬µ{¦¡
+ åŸ·è¡Œç¨‹å¼ï¼Œé—œé–‰SSHå»ä¸å›žé—œé–‰ç¨‹å¼
  nohup your_command &   nohup command > myout.file 2>&1
  
  jobs
@@ -48,18 +48,18 @@ bg
  
  route add -net 225.25.0.0 netmask 255.255.0.0 dev ens33
  
- netstat-gn ¬Ýmuticast
+ netstat-gn çœ‹muticast
 
-ulimit -c unlimited ¶}±Ò DUMP 
-vi /etc/profile¤¤¥[¤J¥H¤U¤@¦æ¡A³o±N¤¹³\¥Í¦¨coredump¤å¥ó
+ulimit -c unlimited é–‹å•Ÿ DUMP 
+vi /etc/profileä¸­åŠ å…¥ä»¥ä¸‹ä¸€è¡Œï¼Œé€™å°‡å…è¨±ç”Ÿæˆcoredumpæ–‡ä»¶
 
 ulimit -c unlimited
 
 
-­ì¤åºô§}¡Ghttps://read01.com/mnaJk6.html
+åŽŸæ–‡ç¶²å€ï¼šhttps://read01.com/mnaJk6.html
 
 
-gdb ./t core.t.3529 ¬ÝCORE DUMP°ÝÃD
+gdb ./t core.t.3529 çœ‹CORE DUMPå•é¡Œ
 
 crontab -e -u
 20 7 * * 1-6 /root/ddsc.sh
@@ -69,13 +69,13 @@ crontab -e -u
 	cd /root/marketserver
 	nohup ./marketserver >/root/marketserver/nohup.txt 2>&1 &
 
-/var/log/cron cron°õ¦æLOG
+/var/log/cron cronåŸ·è¡ŒLOG
 
 shell
  date +"%Y%m%d" -d'-10 day'
 find /root/marketserver/log/ -mtime +10 -name "*.*" -exec rm -Rf {} \;
 
-tcpÄÝ©Ê³]©w
+tcpå±¬æ€§è¨­å®š
 http://www.cnblogs.com/fczjuever/archive/2013/04/17/3026694.html
 http://www.blogjava.net/yongboy/archive/2013/04/11/397677.html
 /etc/sysctl.conf
@@ -91,7 +91,7 @@ net.ipv4.conf.all.rp_filter = 2
 scp name@ip
 ssh name@ip
 
-ll /proc/14763/fd ¬d¬Ý socket or file information
+ll /proc/14763/fd æŸ¥çœ‹ socket or file information
 lsof -n -i   | grep 36222307 Check IP  for socket number
 
 http://lovewubo.github.io/shared_library
@@ -101,3 +101,5 @@ cp * bak20180120
 
 
 scp ./marketserver root@172.16.204.175:/root/marketserver
+
+https://www.dropbox.com/s/2gc6rvqu03h08xg/PS_TRADING_API_WIN_189.zip?dl=0
