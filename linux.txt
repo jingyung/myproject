@@ -103,3 +103,6 @@ cp * bak20180120
 scp ./marketserver root@172.16.204.175:/root/marketserver
 
 https://www.dropbox.com/s/2gc6rvqu03h08xg/PS_TRADING_API_WIN_189.zip?dl=0
+F205073
+799 125 215
+p788jq
