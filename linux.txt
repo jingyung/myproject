@@ -84,7 +84,7 @@ net.ipv4.conf.all.rp_filter = 2
 net.ipv4.tcp_wmem = 4096 4096 16777216
 net.core.wmem_max=12582912
 sysctl -p
-
+P@n710720
 route setting
 net.ipv4.conf.default.rp_filter = 2
 net.ipv4.conf.all.rp_filter = 2
@@ -105,4 +105,4 @@ scp ./marketserver root@172.16.204.175:/root/marketserver
 https://www.dropbox.com/s/2gc6rvqu03h08xg/PS_TRADING_API_WIN_189.zip?dl=0
 F205073
 799 125 215
-p788jq
+
