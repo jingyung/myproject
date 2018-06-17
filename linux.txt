@@ -121,3 +121,4 @@ scl enable devtoolset-6 bash
 yum -y install epel-release
 yum -y install codeblocks
 
+solarflare
