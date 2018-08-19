@@ -1,0 +1,13 @@
+   Process currentProcessByName = Process.GetCurrentProcess();
+                Process[] preProcessByName = Process.GetProcessesByName("MarketInfoSocketServer");
+
+                if (preProcessByName.Length > 0)
+                {
+                    for (int i = 0; i < preProcessByName.Length; i++)
+                    {
+                        if (preProcessByName[i].Id != currentProcessByName.Id)
+                        {
+                            preProcessByName[i].Kill();
+                        }
+                    }
+                }
